@@ -1,0 +1,163 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Users\Fractious Person\Documents\U0021 Freemote\Subpatches\Bullet\Boundary Kill.v4p" filename="C:\Users\Fractious Person\Documents\U0021 Freemote\Subpatches\Bullet\Boundary Kill.v4p" systemname="Boundary Kill">
+   <BOUNDS height="12900" left="10200" top="6735" type="Window" width="12000">
+   </BOUNDS>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="0" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="1995" top="465" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1995" top="465" type="Box" width="1065">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Rigid Bodies|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\Bullet\VVVV.Nodes.Bullet.dll" id="1" nodename="GetRigidBodyDetails (Bullet)" systemname="GetRigidBodyDetails (Bullet)">
+   <BOUNDS height="100" left="2295" top="1905" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Bodies" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   <PIN pinname="Custom" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Bodies" srcnodeid="0" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="2" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
+   <BOUNDS height="100" left="2670" top="3900" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="6" nodename="EQ (Value)" systemname="EQ (Value)">
+   <BOUNDS height="100" left="2280" top="3015" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Epsilon" slicecount="1" values="35">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="Input 1" srcnodeid="1" srcpinname="PositionXYZ">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="XYZ" srcnodeid="6" srcpinname="Inverse Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="7" nodename="OR (Boolean)" systemname="OR (Boolean)">
+   <BOUNDS height="270" left="2685" top="4755" type="Node" width="630">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Input 1" srcnodeid="2" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Input 2" srcnodeid="2" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Input 3" srcnodeid="2" srcpinname="Z">
+   </LINK>
+   <NODE componentmode="Hidden" id="8" nodename="Select (Value)" systemname="Select (Value)">
+   <BOUNDS height="100" left="3375" top="6090" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Select" srcnodeid="7" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="11" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
+   <BOUNDS height="100" left="2010" top="7605" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="11" dstpinname="Input Node" srcnodeid="0" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\Bullet\VVVV.Nodes.Bullet.dll" id="14" nodename="DestroyBody (Bullet)" systemname="DestroyBody (Bullet)">
+   <BOUNDS height="100" left="2025" top="9720" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Bodies" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Bodies" srcnodeid="11" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="16" nodename="Count (Node)" systemname="Count (Node)">
+   <BOUNDS height="100" left="3000" top="8040" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="16" dstpinname="Input" srcnodeid="11" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="17" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5700" top="4200" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="5700" top="4200" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="17" dstpinname="Y Input Value" srcnodeid="1" srcpinname="Id">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Input" srcnodeid="1" srcpinname="Id">
+   </LINK>
+   <NODE componentmode="Hidden" id="18" nodename="Sift (Value)" systemname="Sift (Value)">
+   <BOUNDS height="100" left="3180" top="6690" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Filter" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Filter" srcnodeid="8" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="18" dstpinname="Input" srcnodeid="1" srcpinname="Id">
+   </LINK>
+   <LINK dstnodeid="11" dstpinname="Index" srcnodeid="18" srcpinname="Input Index">
+   </LINK>
+   <NODE componentmode="Hidden" id="20" nodename="Change (Animation)" systemname="Change (Animation)">
+   <BOUNDS height="100" left="3015" top="8955" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="20" dstpinname="Input" srcnodeid="16" srcpinname="Count">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Apply" srcnodeid="20" srcpinname="OnChange">
+   </LINK>
+   </PATCH>

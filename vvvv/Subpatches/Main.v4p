@@ -1,0 +1,303 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Main.v4p" filename="C:\Users\Fractious Person\Documents\U0021 Freemote\Main.v4p" systemname="Main">
+   <BOUNDS height="13680" left="12285" top="1560" type="Window" width="11100">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" filename="Subpatches\Bullet\Bullet.v4p" hiddenwhenlocked="0" id="0" nodename="Subpatches\Bullet\Bullet.v4p" systemname="Bullet" path="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Subpatches\Bullet\">
+   <BOUNDS height="270" left="1335" top="4170" type="Node" width="2400">
+   </BOUNDS>
+   <PIN pinname="Rigid Bodies" visible="1">
+   </PIN>
+   <BOUNDS height="13680" left="12285" top="1560" type="Window" width="11100">
+   </BOUNDS>
+   <PIN pinname="Layer" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Kinect Skeleton Transform" visible="1">
+   </PIN>
+   <PIN pinname="Skeleton Pos XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Skeleton ID" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <PIN pinname="global biped scale" visible="1">
+   </PIN>
+   <PIN pinname="TEST VIEWING MODE">
+   </PIN>
+   <PIN pinname="Skeleton Centre XYZ" visible="1">
+   </PIN>
+   <PIN pinname="World" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" debug="0" filename="Subpatches\Graphics\Graphics.v4p" hiddenwhenlocked="0" id="3" nodename="Subpatches\Graphics\Graphics.v4p" systemname="Graphics" path="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Subpatches\Graphics\">
+   <BOUNDS height="270" left="5070" top="5280" type="Node" width="2550">
+   </BOUNDS>
+   <BOUNDS height="3600" left="5070" top="5280" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="13680" left="12285" top="1560" type="Window" width="11100">
+   </BOUNDS>
+   <PIN pinname="Rigid Bodies" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer in" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="kinct_transforms" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="backbuffer width" visible="1">
+   </PIN>
+   <PIN pinname="backbuffer height" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="bullet layer temp" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="TEST VIEW" visible="1">
+   </PIN>
+   <PIN pinname="Skeleton Centre XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" filename="Subpatches\Final Renderer\Final Renderer.v4p" hiddenwhenlocked="0" id="7" nodename="Subpatches\Final Renderer\Final Renderer.v4p" systemname="Final Renderer" path="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Subpatches\Final Renderer\">
+   <BOUNDS height="270" left="5055" top="7320" type="Node" width="1965">
+   </BOUNDS>
+   <BOUNDS height="3600" left="5055" top="7320" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="8085" left="11190" top="4695" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Width - Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Height - Backbuffer Height" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="Subpatches\OSC Audio\OSC Audio.v4p" hiddenwhenlocked="0" id="8" nodename="Subpatches\OSC Audio\OSC Audio.v4p" systemname="OSC Audio" path="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Subpatches\OSC Audio\">
+   <BOUNDS height="100" left="1080" top="5385" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="1080" top="5385" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="12900" left="0" top="0" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Rigid Bodies" visible="1">
+   </PIN>
+   <PIN pinname="World" visible="1">
+   </PIN>
+   <PIN pinname="Skeleton Pos XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Skeleton ID" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Rigid Bodies" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="0" srcpinname="Rigid Bodies">
+   </LINK>
+   <NODE componentmode="InAWindow" debug="0" filename="Subpatches\Kinect OSC\OSC Kinect.v4p" hiddenwhenlocked="0" id="10" nodename="Subpatches\Kinect OSC\OSC Kinect.v4p" systemname="OSC Kinect" path="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Subpatches\Kinect OSC\">
+   <BOUNDS height="270" left="1065" top="1950" type="Node" width="4785">
+   </BOUNDS>
+   <PIN pinname="Skeleton Transform Out" visible="1">
+   </PIN>
+   <BOUNDS height="13680" left="12285" top="1560" type="Window" width="11100">
+   </BOUNDS>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="global biped scale" slicecount="1" visible="1" values="9">
+   </PIN>
+   <PIN pinname="Skeleton Pos XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Skeleton ID" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" visible="1" values="0.33">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="1.19">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" visible="1" values="-2.33">
+   </PIN>
+   <PIN pinname="Z-bodge" visible="1">
+   </PIN>
+   <PIN pinname="Y-bodge" visible="1">
+   </PIN>
+   <PIN pinname="X-bodge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Layers" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="3" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Rigid Bodies" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="0" srcpinname="Rigid Bodies">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Backbuffer Width - Backbuffer Width" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="3" srcpinname="backbuffer width">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Backbuffer Height - Backbuffer Height" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="3" srcpinname="backbuffer height">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="15" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1545" top="150" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1545" top="150" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="9">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|global biped scale|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="global biped scale" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="15" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="16" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1140" top="810" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1140" top="810" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="X">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="X" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="16" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="17" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="2040" top="825" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="2040" top="825" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.41">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Y">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Y" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="17" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="18" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="3000" top="855" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="3000" top="855" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="-2.62">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Z">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Z" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="18" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="19" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="2550" top="345" type="Node" width="1635">
+   </BOUNDS>
+   <BOUNDS height="270" left="2550" top="345" type="Box" width="1635">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|BIPED XFORM BODGES|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="X" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="16" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Y" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="17" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Z" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="18" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="global biped scale" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="15" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="20" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5055" top="3090" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="5055" top="3090" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|TEST VIEW|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="TEST VIEWING MODE" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="TEST VIEW" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Skeleton Centre XYZ" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="0" srcpinname="Skeleton Centre XYZ">
+   </LINK>
+   <NODE componentmode="Hidden" id="-8" nodename="Boost (VVVV)" systemname="Boost (VVVV)">
+   <BOUNDS height="100" left="1380" top="6630" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="-7" nodename="MainLoop (VVVV)" systemname="MainLoop (VVVV)">
+   <BOUNDS height="100" left="1380" top="7050" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Maximum forground fps" slicecount="1" values="120">
+   </PIN>
+   <PIN pinname="Maximum background fpsS" slicecount="1" values="120">
+   </PIN>
+   <PIN pinname="Time Mode" slicecount="1" values="Filtered">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="bullet layer temp" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="0" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="World" srcnodeid="0" srcpinname="World">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Skeleton ID" srcnodeid="10" srcpinname="Skeleton ID">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Skeleton Pos XYZ" srcnodeid="10" srcpinname="Skeleton Pos XYZ">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="kinct_transforms" srcnodeid="10" srcpinname="Skeleton Transform Out">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Skeleton Pos XYZ" srcnodeid="10" srcpinname="Skeleton Pos XYZ">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Skeleton ID" srcnodeid="10" srcpinname="Skeleton ID">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Z-bodge" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Y-bodge" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="10" dstpinname="X-bodge" hiddenwhenlocked="1">
+   </LINK>
+   </PATCH>

@@ -1,0 +1,167 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Users\Fractious Person\Documents\U0021 Freemote\Subpatches\Bullet\Skeleton ID.v4p" systemname="Skeleton ID" filename="C:\Users\Fractious Person\Documents\U0021 Freemote\Subpatches\Bullet\Skeleton ID.v4p">
+   <BOUNDS type="Window" left="13125" top="6210" width="9000" height="6000">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="10" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1230" top="5925" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1230" top="5925" type="Box" width="1605">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Kinect Skeleton ID|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="9" nodename="Count (Value)" systemname="Count (Value)">
+   <BOUNDS height="100" left="2610" top="1455" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1215" top="495" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1215" top="495" type="Box" width="1125">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Skeleton iXYZ|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="7" nodename="I (Spreads)" systemname="I (Spreads)">
+   <BOUNDS height="100" left="2400" top="2550" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname=".. To [" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="9" dstpinname="Input" linkstyle="Bezier" srcnodeid="8" srcpinname="Y Output Value">
+   <LINKPOINT x="1275" y="1080">
+   </LINKPOINT>
+   <LINKPOINT x="2610" y="1080">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" id="6" nodename="Resample (Spreads)" systemname="Resample (Spreads)">
+   <BOUNDS height="100" left="2940" top="3795" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="5" nodename="Resample (Spreads)" systemname="Resample (Spreads)">
+   <BOUNDS height="100" left="3420" top="2535" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="4" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <BOUNDS height="100" left="2925" top="3090" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="4" dstpinname="Input 2" srcnodeid="5" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Input" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="3" nodename="Select (Value)" systemname="Select (Value)">
+   <BOUNDS height="100" left="2400" top="4305" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Select" srcnodeid="6" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="7" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Spread Count" linkstyle="Bezier" srcnodeid="9" srcpinname="Count">
+   <LINKPOINT x="2670" y="2760">
+   </LINKPOINT>
+   <LINKPOINT x="3780" y="2760">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="7" dstpinname=".. To [" srcnodeid="9" srcpinname="Count">
+   </LINK>
+   <NODE componentmode="Hidden" id="2" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)">
+   <BOUNDS height="100" left="1215" top="4785" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Index" linkstyle="Bezier" srcnodeid="3" srcpinname="Output">
+   <LINKPOINT x="2400" y="4673">
+   </LINKPOINT>
+   <LINKPOINT x="1950" y="4673">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Input" srcnodeid="8" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="3075" top="4155" type="Node" width="2805">
+   </BOUNDS>
+   <BOUNDS height="510" left="3075" top="4155" type="Box" width="1650">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Get first slice of every Kinect Skeleton|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="4275" top="1890" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="4275" top="1890" type="Box" width="1710">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="63">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Amount of Kinect data|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Spread Count" srcnodeid="0" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Y Input Value" srcnodeid="2" srcpinname="Output">
+   </LINK>
+   </PATCH>

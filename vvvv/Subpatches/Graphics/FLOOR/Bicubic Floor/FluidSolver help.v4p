@@ -1,0 +1,775 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta23.dtd" >
+   <PATCH nodename="c:\MemoFluids\FluidSolver help.v4p">
+   <BOUNDS height="1650" left="570" top="6390" type="Window" width="6960">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" id="44" nodename="FluidSolver.dll">
+   <BOUNDS height="270" left="2475" top="4620" type="Node" width="11115">
+   </BOUNDS>
+   <BOUNDS left="2475" top="4620" type="Box">
+   </BOUNDS>
+   <PIN pinname="GridSizeX " pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="MousePosX " pintype="Input" slicecount="1" visible="-1" values="-0.880225988700565">
+   </PIN>
+   <PIN pinname="MousePosY " pintype="Input" slicecount="1" visible="-1" values="-0.510204081632653">
+   </PIN>
+   <PIN pinname="DoWrite " pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="GridSizeY " pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="WindowSizeX " visible="1">
+   </PIN>
+   <PIN pinname="WindowSizeY " visible="1">
+   </PIN>
+   <PIN pinname="ParticleOutput" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="DirectParticleOutput" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="CalcSpeed" visible="1">
+   </PIN>
+   <PIN pinname="Fluids Color Map" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="FluidWidth" visible="1">
+   </PIN>
+   <PIN pinname="FluidHeight" visible="1">
+   </PIN>
+   <PIN pinname="Draw Particles" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Draw Fluids" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Particle Count " pintype="Input" slicecount="1" visible="1" values="10">
+   </PIN>
+   <PIN pinname="Reset" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="PositionInput XY" visible="1">
+   </PIN>
+   <PIN pinname="OldPositionInput XY" visible="1">
+   </PIN>
+   <PIN pinname="OnlyMove " pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Particle Acceleration " pintype="Input" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="ColorFluids" pintype="Input" slicecount="1" visible="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Particle Timeout " slicecount="1" values="0.9">
+   </PIN>
+   <PIN pinname="Particle LifeTime  " slicecount="1" values="0.98">
+   </PIN>
+   <PIN pinname="Transform Out" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Particle Area " pintype="Input" slicecount="1" visible="1" values="25">
+   </PIN>
+   <PIN pinname="Bound Matrix" pintype="Input" slicecount="2500" visible="-1" values="1,0,1,1,1,-1000,0,-1000,-1000,-1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,-1000,-1000,-1000,0,1,-1000,-1000,-1000,-1000,0,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,-1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,0,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,-1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,-1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1,1,1,1,1,1,1,1,1,1,1,1,1,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,1,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,1,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,1,1,1,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,1,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,1,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,0,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,1,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000,-1000,1000,-1000,-1000">
+   </PIN>
+   <PIN pinname="Particle Momentum  " slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Particle Force " slicecount="1" values="0.6">
+   </PIN>
+   <PIN pinname="Fluid Visc " slicecount="1" values="0.015">
+   </PIN>
+   <PIN pinname="Fluid Visc (0.015)" pintype="Input" slicecount="1" visible="1" values="0.014">
+   </PIN>
+   <PIN pinname="Particle Force (0.6)" pintype="Input" slicecount="1" visible="1" values="0.45">
+   </PIN>
+   <PIN pinname="Particle Momentum (0.5)" pintype="Input" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Particle LifeTime (0.99) " pintype="Input" slicecount="1" visible="1" values="0.97">
+   </PIN>
+   <PIN pinname="Transform Out2" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Particle Broun " pintype="Input" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="TransformIn" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="43" nodename="Renderer (EX9)">
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <BOUNDS height="5835" left="540" top="495" type="Window" width="6960">
+   </BOUNDS>
+   <BOUNDS height="0" left="4815" top="10605" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1800" left="4815" top="10605" type="Box" width="2400">
+   </BOUNDS>
+   <PIN pinname="Clear" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" pintype="Input" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="EX9 Out" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
+   </PIN>
+   <PIN pinname="Backbuffer Width" pintype="Input" slicecount="1" visible="1" values="1024">
+   </PIN>
+   <PIN pinname="Backbuffer Height" pintype="Input" slicecount="1" visible="1" values="768">
+   </PIN>
+   <PIN pinname="Fullscreen" pintype="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Projection Transform" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="View Transform" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="Aspect Ratio Transform" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="X" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Y" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Left Button" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Middle Button" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Right Button" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Is Fullscreen" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Crop Transform" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="Viewport Transform" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="Transformations Index" pintype="Input" slicecount="1" visible="-1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE id="42" nodename="Quad (DX9)">
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <BOUNDS height="270" left="5085" top="7065" type="Node" width="600">
+   </BOUNDS>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Draw Slicewise" pintype="Input" slicecount="1" visible="-1" values="1">
+   </PIN>
+   <PIN pinname="Sampler State" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Coord Mapping" pintype="Input" slicecount="1" visible="0" values="FrontProjected_XY">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="41" nodename="Group (EX9)">
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <BOUNDS height="270" left="5100" top="8250" type="Node" width="1995">
+   </BOUNDS>
+   <PIN pinname="Layer Template Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="-1" values="1">
+   </PIN>
+   </NODE>
+   <NODE hiddenwhenlocked="1" id="40" nodename="Quad (DX9)">
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <BOUNDS height="0" left="7035" top="7680" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Render State" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="Texture" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="Sampler State" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   <PIN pinname="Texture Coord Mapping" pintype="Input" slicecount="1" visible="-1" values="OnShape_UV">
+   </PIN>
+   <PIN pinname="Draw Slicewise" pintype="Input" slicecount="1" visible="-1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="-1" values="1">
+   </PIN>
+   </NODE>
+   <NODE hiddenwhenlocked="1" id="39" nodename="Scale (Transform Vector)">
+   <BOUNDS height="0" left="7035" top="7215" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" pintype="Input" slicecount="3" visible="-1" values="2,2,2">
+   </PIN>
+   <PIN pinname="Transform In" pintype="Input" slicecount="1" visible="-1" values="||">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="40" dstpinname="Transform" hiddenwhenlocked="1" srcnodeid="39" srcpinname="Transform Out">
+   </LINK>
+   <NODE id="38" nodename="Blend (EX9.RenderState)">
+   <BOUNDS height="0" left="5100" top="6615" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Draw Mode" slicecount="1" values="ColorAsAlphaAdd">
+   </PIN>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Render State In" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="37" nodename="Damper (Animation)">
+   <BOUNDS height="0" left="10290" top="3600" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="44" dstpinname="OldPositionInput XY" srcnodeid="37" srcpinname="Position Out">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="36" nodename="SetAlpha (Color)">
+   <BOUNDS height="0" left="7740" top="7455" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" pintype="Input" slicecount="1" visible="-1" values="0.19">
+   </PIN>
+   <PIN pinname="Input" pintype="Input" slicecount="1" visible="-1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="40" dstpinname="Color" hiddenwhenlocked="1" srcnodeid="36" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="41" dstpinname="Layer 1" srcnodeid="42" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="35" nodename="SetAlpha (Color)">
+   <BOUNDS height="0" left="6030" top="6540" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" slicecount="1" visible="1" values="|2.00000,2.00000,2.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="42" dstpinname="Color" srcnodeid="35" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="42" dstpinname="Render State" srcnodeid="38" srcpinname="Render State Out">
+   </LINK>
+   <LINK dstnodeid="42" dstpinname="Transform" srcnodeid="44" srcpinname="Transform Out2">
+   </LINK>
+   <NODE componentmode="Hidden" id="34" nodename="Mouse (System Window)">
+   <BOUNDS height="270" left="9600" top="240" type="Node" width="2895">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="33" nodename="Vector (2d Join)">
+   <BOUNDS height="0" left="9615" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="33" dstpinname="X" srcnodeid="34" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="33" dstpinname="Y" srcnodeid="34" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Go To Position" srcnodeid="33" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="44" dstpinname="PositionInput XY" srcnodeid="33" srcpinname="XY">
+   </LINK>
+   <NODE componentmode="InABox" id="32" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="975" top="3375" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="975" top="3375" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="3540" top="3405" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="35">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="31" nodename="OnOpen (VVVV)">
+   <BOUNDS height="0" left="5325" top="9555" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="41" dstpinname="Layer 2" srcnodeid="40" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="44" dstpinname="GridSizeY " srcnodeid="32" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="44" dstpinname="GridSizeX " srcnodeid="32" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="30" nodename="DynamicTexture (EX9.Texture Color)">
+   <BOUNDS height="0" left="1710" top="5610" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Width" visible="1">
+   </PIN>
+   <PIN pinname="Height" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="30" dstpinname="Width" srcnodeid="32" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="30" dstpinname="Height" srcnodeid="32" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="29" nodename="IOBox (String)">
+   <BOUNDS height="270" left="9615" top="585" type="Node" width="2940">
+   </BOUNDS>
+   <BOUNDS height="315" left="9615" top="585" type="Box" width="2880">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|change this to spreadable input|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="28" nodename="IOBox (String)">
+   <BOUNDS height="270" left="180" top="45" type="Node" width="975">
+   </BOUNDS>
+   <BOUNDS height="405" left="180" top="45" type="Box" width="6330">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Fluid Solver - move mouse  into render|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="27" nodename="IOBox (String)">
+   <BOUNDS height="270" left="180" top="465" type="Node" width="2940">
+   </BOUNDS>
+   <BOUNDS height="720" left="180" top="465" type="Box" width="4500">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|inspired by and grateful to &cr;&lf;Memo Akten http://www.memo.tv/ &cr;&lf;mr.Vux http://vvvv.org/tiki-index.php?page=userpagevux|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="26" nodename="IOBox (String)">
+   <BOUNDS height="270" left="165" top="10320" type="Node" width="2910">
+   </BOUNDS>
+   <BOUNDS height="285" left="165" top="10320" type="Box" width="3645">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|pluging code by Yuri Dolgov|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="25" nodename="IOBox (String)">
+   <BOUNDS height="270" left="165" top="10605" type="Node" width="1155">
+   </BOUNDS>
+   <BOUNDS height="330" left="165" top="10605" type="Box" width="1200">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|patch by bo27|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="24" nodename="IOBox (Color)">
+   <BOUNDS height="0" left="9000" top="1950" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="9000" top="1950" type="Box" width="2370">
+   </BOUNDS>
+   <BOUNDS height="160" left="7530" top="5910" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="30" dstpinname="Color" linkstyle="Bezier" srcnodeid="44" srcpinname="Fluids Color Map">
+   <LINKPOINT x="13530" y="5235">
+   </LINKPOINT>
+   <LINKPOINT x="2925" y="5235">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" id="23" nodename="Quad (DX9)">
+   <BOUNDS height="0" left="1380" top="6570" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Texture" srcnodeid="30" srcpinname="Texture Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="22" nodename="Scale (Transform Vector)">
+   <BOUNDS height="0" left="1530" top="6180" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="3" values="2,2,2">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Transform" srcnodeid="22" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="21" nodename="SetAlpha (Color)">
+   <BOUNDS height="0" left="2370" top="6150" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Color" srcnodeid="21" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="20" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="240" top="1515" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="720" left="240" top="1515" type="Box" width="660">
+   </BOUNDS>
+   <BOUNDS height="160" left="3495" top="3570" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="19" nodename="OR (Boolean)">
+   <BOUNDS height="0" left="4980" top="10080" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="19" dstpinname="Input 2" srcnodeid="31" srcpinname="Bang">
+   </LINK>
+   <LINK dstnodeid="43" dstpinname="Clear" srcnodeid="19" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Input 1" srcnodeid="20" srcpinname="Y Output Value">
+   <LINKPOINT x="855" y="10095">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="18" nodename="IOBox (String)">
+   <BOUNDS height="270" left="7155" top="7995" type="Node" width="1005">
+   </BOUNDS>
+   <BOUNDS height="270" left="7155" top="7995" type="Box" width="1005">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|mr.vux blur|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="17" nodename="IOBox (String)">
+   <BOUNDS height="480" left="1860" top="3345" type="Node" width="2115">
+   </BOUNDS>
+   <BOUNDS height="585" left="1860" top="3345" type="Box" width="2130">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|bigger value more accurately&cr;&lf;less performance|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="16" nodename="Switch (Node Input)">
+   <BOUNDS height="0" left="4815" top="9150" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="16" dstpinname="Input 1" srcnodeid="41" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Switch" srcnodeid="20" srcpinname="Y Output Value">
+   <LINKPOINT x="840" y="9150">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="43" dstpinname="Layers" srcnodeid="16" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="15" nodename="Group (EX9)">
+   <BOUNDS height="270" left="1380" top="8100" type="Node" width="945">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="-1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="15" dstpinname="Layer 1" srcnodeid="23" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Input 2" linkstyle="VHV" srcnodeid="15" srcpinname="Layer">
+   <LINKPOINT x="1440" y="8685">
+   </LINKPOINT>
+   <LINKPOINT x="5370" y="8805">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" id="14" nodename="Quad (DX9)">
+   <BOUNDS height="0" left="2280" top="7740" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="15" dstpinname="Layer 2" srcnodeid="14" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="13" nodename="Scale (Transform Vector)">
+   <BOUNDS height="0" left="2460" top="7170" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Transform In" srcnodeid="44" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Transform" srcnodeid="13" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="InABox" id="12" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="3285" top="6960" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="3285" top="6960" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="9075" top="5115" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.005">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="XYZ" srcnodeid="12" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="11" nodename="Blend (EX9.RenderState)">
+   <BOUNDS height="0" left="135" top="6330" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Draw Mode" slicecount="1" values="ColorAsAlphaAdd">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Render State" srcnodeid="11" srcpinname="Render State Out">
+   </LINK>
+   <NODE componentmode="InABox" id="10" nodename="IOBox (String)">
+   <BOUNDS height="270" left="4140" top="4230" type="Node" width="1620">
+   </BOUNDS>
+   <BOUNDS height="315" left="4140" top="4230" type="Box" width="3150">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|play with values here or look at Inspektor|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="9" nodename="IOBox (String)">
+   <BOUNDS height="270" left="2550" top="4980" type="Node" width="1785">
+   </BOUNDS>
+   <BOUNDS height="270" left="2550" top="4980" type="Box" width="1785">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|particles xy|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="8" nodename="IOBox (String)">
+   <BOUNDS height="270" left="5295" top="4980" type="Node" width="1785">
+   </BOUNDS>
+   <BOUNDS height="270" left="5295" top="4980" type="Box" width="2610">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|particles xy, rotate, length|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="44" dstpinname="Draw Fluids" linkstyle="Bezier" srcnodeid="20" srcpinname="Y Output Value">
+   <LINKPOINT x="910" y="3543">
+   </LINKPOINT>
+   <LINKPOINT x="12215" y="3283">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (String)">
+   <BOUNDS height="270" left="12315" top="4980" type="Node" width="1785">
+   </BOUNDS>
+   <BOUNDS height="300" left="12315" top="4980" type="Box" width="1290">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|fluids color map|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="5" nodename="ValueToggle.v4p" path="c:\MemoFluids\">
+   <BOUNDS height="100" left="11280" top="1260" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="InputValue" visible="1">
+   </PIN>
+   <PIN pinname="ToggleValue" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="InputValue" srcnodeid="34" srcpinname="Left Button">
+   </LINK>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (String)">
+   <BOUNDS height="270" left="12510" top="1260" type="Node" width="930">
+   </BOUNDS>
+   <BOUNDS height="315" left="12510" top="1260" type="Box" width="1560">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;- inside by tonfilm?|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="20" dstpinname="Y Input Value" srcnodeid="5" srcpinname="ToggleValue">
+   </LINK>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (String)">
+   <BOUNDS height="480" left="8670" top="4065" type="Node" width="885">
+   </BOUNDS>
+   <BOUNDS height="480" left="8670" top="4065" type="Box" width="885">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|connect &cr;&lf;color here|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="13110" top="3675" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="495" left="13110" top="3675" type="Box" width="465">
+   </BOUNDS>
+   <BOUNDS height="160" left="14640" top="4170" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="44" dstpinname="Reset" srcnodeid="2" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)">
+   <BOUNDS height="270" left="13140" top="4215" type="Node" width="555">
+   </BOUNDS>
+   <BOUNDS height="270" left="13140" top="4215" type="Box" width="555">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="reset">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (String)">
+   <BOUNDS height="270" left="10800" top="4290" type="Node" width="1080">
+   </BOUNDS>
+   <BOUNDS height="240" left="10800" top="4290" type="Box" width="2070">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|connect to buttons....|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   </PATCH>

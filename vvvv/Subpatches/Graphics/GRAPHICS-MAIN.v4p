@@ -1,0 +1,99 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\GRAPHICS.v4p" filename="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\GRAPHICS.v4p" systemname="GRAPHICS">
+   <BOUNDS height="13680" left="300" top="0" type="Window" width="15600">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" filename="Subpatches\GPU Particles.v4p" id="77" nodename="Subpatches\GPU Particles.v4p" systemname="GPU Particles" path="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Subpatches\">
+   <BOUNDS height="100" left="7155" top="1845" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="13680" left="300" top="0" type="Window" width="15600">
+   </BOUNDS>
+   <PIN pinname="bullet_in" visible="1">
+   </PIN>
+   <PIN pinname="particles out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" filename="Subpatches\composite.v4p" id="78" nodename="Subpatches\composite.v4p" systemname="composite" path="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Subpatches\">
+   <BOUNDS height="270" left="2520" top="4995" type="Node" width="4680">
+   </BOUNDS>
+   <BOUNDS height="3600" left="2520" top="4995" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="13680" left="300" top="0" type="Window" width="15600">
+   </BOUNDS>
+   <PIN pinname="particles in" visible="1">
+   </PIN>
+   <PIN pinname="bullet_in" visible="1">
+   </PIN>
+   <PIN pinname="bullet-transform" visible="1">
+   </PIN>
+   <PIN pinname="kinct_meshes" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="kinct_transforms" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="bullet_mesh_in" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="78" dstpinname="particles in" srcnodeid="77" srcpinname="particles out">
+   </LINK>
+   <NODE componentmode="InAWindow" filename="Subpatches\boxtest.v4p" id="79" nodename="Subpatches\boxtest.v4p" systemname="boxtest" path="C:\Users\alienware2\Desktop\mike freemote\U0021 Freemote\Subpatches\">
+   <BOUNDS height="100" left="2835" top="3630" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="6000" left="570" top="7050" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="mesh" visible="1">
+   </PIN>
+   <PIN pinname="xform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="78" dstpinname="bullet-transform" srcnodeid="79" srcpinname="xform">
+   </LINK>
+   <NODE componentmode="InABox" id="80" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="4050" top="1350" type="Node" width="360">
+   </BOUNDS>
+   <BOUNDS height="270" left="4050" top="1350" type="Box" width="360">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="joe">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="81" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="4815" top="2565" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4815" top="2565" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="kinct_meshes" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="81" srcpinname="Output Node" dstnodeid="78" dstpinname="kinct_meshes">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="82" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="6000" top="3420" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6000" top="3420" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="kinct_transforms" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Output Node" dstnodeid="78" dstpinname="kinct_transforms">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="83" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="2520" top="2670" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2520" top="2670" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="bullet_mesh_in" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Output Node" dstnodeid="78" dstpinname="bullet_mesh_in">
+   </LINK>
+   </PATCH>

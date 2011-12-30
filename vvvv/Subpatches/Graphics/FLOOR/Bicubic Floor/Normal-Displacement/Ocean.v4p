@@ -1,0 +1,173 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Users\me\Desktop\FLOOR\Normal-Displacement\Ocean.v4p" filename="C:\Users\me\Desktop\Hammock\_root2.v4p" systemname="_root2">
+   <BOUNDS height="3705" left="5370" top="615" type="Window" width="4395">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" id="1" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <BOUNDS height="100" left="330" top="2745" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="330" top="2745" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="11310" left="21900" top="855" type="Window" width="19440">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1280 x 720|">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Width" slicecount="1" values="1280">
+   </PIN>
+   <PIN pinname="Backbuffer Height" slicecount="1" values="720">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\Transform\Camera (Transform Softimage).v4p" id="3" nodename="Camera (Transform Softimage)" systemname="Camera (Transform Softimage)">
+   <BOUNDS height="100" left="1305" top="2415" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Initial Interest" visible="1">
+   </PIN>
+   <PIN pinname="Inital Distance" slicecount="1" values="42">
+   </PIN>
+   <PIN pinname="Initial Pitch" slicecount="1" values="0.03">
+   </PIN>
+   <PIN pinname="Initial Yaw" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Interest" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Near Plane" slicecount="1" values="0.005">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="View" linkstyle="Bezier" srcnodeid="3" srcpinname="View">
+   <LINKPOINT x="1500" y="2730">
+   </LINKPOINT>
+   <LINKPOINT x="1470" y="2700">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Projection" linkstyle="Bezier" srcnodeid="3" srcpinname="Projection">
+   <LINKPOINT x="1650" y="2730">
+   </LINKPOINT>
+   <LINKPOINT x="1620" y="2700">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1395" top="1635" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="720" left="1395" top="1635" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,4,0">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Initial Interest" linkstyle="Bezier" srcnodeid="4" srcpinname="Y Output Value">
+   <LINKPOINT x="1380" y="2403">
+   </LINKPOINT>
+   <LINKPOINT x="1365" y="2368">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" id="33" nodename="Fog (EX9.RenderState)" systemname="Fog (EX9.RenderState)">
+   <BOUNDS height="100" left="255" top="150" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Density (for modes Exp and Exp2)" slicecount="1" values="0.045">
+   </PIN>
+   <PIN pinname="Render State In" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Enable" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Range To" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Fog Color" slicecount="1" values="|0.11434,0.11367,0.13559,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="915" top="765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1">
+   </PIN>
+   <PIN pinname="ScaleZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="35">
+   <BOUNDS type="Node" left="1920" top="330" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1920" top="330" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="48">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="34" dstpinname="ScaleX">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="34" dstpinname="ScaleY">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="34" dstpinname="ScaleZ">
+   </LINK>
+   <NODE id="0" componentmode="Hidden" filename="Ocean Shader\Ocean help.v4p" nodename="Ocean Shader\Ocean help.v4p" systemname="Ocean help">
+   <PIN pinname="state" visible="1">
+   </PIN>
+   <PIN pinname="Trans" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="4575" top="1020" width="14355" height="8760">
+   </BOUNDS>
+   <BOUNDS type="Node" height="100" left="780" top="1125" width="100">
+   </BOUNDS>
+   <PIN pinname="out" visible="1">
+   </PIN>
+   <PIN pinname="Reflection color" slicecount="1" values="|0.40019,0.58846,0.98696,1.00000|">
+   </PIN>
+   <PIN pinname="Bump Height" slicecount="1" values="0.55">
+   </PIN>
+   <PIN pinname="Wave amplitude" slicecount="1" values="0.022">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Transform Out" dstnodeid="0" dstpinname="Trans">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Render State Out" dstnodeid="0" dstpinname="state" linkstyle="Bezier">
+   <LINKPOINT x="400" y="725">
+   </LINKPOINT>
+   <LINKPOINT x="695" y="820">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="out" dstnodeid="1" dstpinname="Layers" linkstyle="Bezier">
+   <LINKPOINT x="810" y="2090">
+   </LINKPOINT>
+   <LINKPOINT x="330" y="2050">
+   </LINKPOINT>
+   </LINK>
+   </PATCH>

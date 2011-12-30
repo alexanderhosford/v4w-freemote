@@ -1,0 +1,201 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Users\Fractious Person\Documents\U0021 Freemote\Subpatches\Bullet\Bullet Renderer.v4p" filename="S:\Art Projects\Freemote\U0021 Freemote\Subpatches\Bullet Renderer.v4p" systemname="Bullet Renderer">
+   <BOUNDS height="12330" left="6585" top="4920" type="Window" width="13410">
+   </BOUNDS>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\Bullet\VVVV.Nodes.Bullet.dll" id="19" nodename="GetRigidBodyDetails (Bullet)" systemname="GetRigidBodyDetails (Bullet)">
+   <BOUNDS height="100" left="3495" top="2955" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="3495" top="2955" type="Box">
+   </BOUNDS>
+   <PIN pinname="Bodies" visible="1">
+   </PIN>
+   <PIN pinname="Shapes Transform" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Custom" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="17" nodename="Transform (Transform 3d)" systemname="Transform (Transform 3d)">
+   <BOUNDS height="100" left="3315" top="5040" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="TranslateZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="16" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
+   <BOUNDS height="100" left="3510" top="4125" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\effects\PhongDirectional.fx" id="15" nodename="PhongDirectional (EX9.Effect)" systemname="PhongDirectional (EX9.Effect)">
+   <BOUNDS height="100" left="2025" top="6195" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Specular Color" slicecount="1" values="|0.63960,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Ambient Color" slicecount="1" values="|1.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="13" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="30" top="6930" type="Node" width="6075">
+   </BOUNDS>
+   <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\AxisAndGrid (DX9).v4p" id="4" nodename="AxisAndGrid (DX9)" systemname="AxisAndGrid (DX9)">
+   <BOUNDS height="100" left="15" top="6180" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="6000" left="9285" top="2070" type="Window" width="9000">
+   </BOUNDS>
+   <BOUNDS height="3600" left="15" top="6180" type="Box" width="4800">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Layer 2" srcnodeid="15" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="2175" top="750" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="2175" top="750" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Bodies">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="19" dstpinname="Bodies" srcnodeid="0" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\Bullet\VVVV.Nodes.Bullet.dll" id="23" nodename="RigidBody (Bullet EX9.Geometry)" systemname="RigidBody (Bullet EX9.Geometry)">
+   <BOUNDS height="100" left="1815" top="4170" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="1815" top="4170" type="Box">
+   </BOUNDS>
+   <PIN pinname="Bodies" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Bodies" srcnodeid="0" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="Transform" srcnodeid="17" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="TranslateX" srcnodeid="16" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="TranslateY" srcnodeid="16" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="TranslateZ" srcnodeid="16" srcpinname="Z">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="XYZ" srcnodeid="19" srcpinname="PositionXYZ">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="Mesh" srcnodeid="23" srcpinname="Mesh">
+   </LINK>
+   <NODE componentmode="Hidden" id="31" nodename="Sphere (EX9.Geometry)" systemname="Sphere (EX9.Geometry)">
+   <BOUNDS height="100" left="1545" top="4785" type="Node" width="100">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="InABox" id="32" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="1440" top="5130" type="Node" width="1800">
+   </BOUNDS>
+   <BOUNDS height="270" left="1440" top="5130" type="Box" width="1800">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Stops gitter on destroy|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="41" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="1110" top="8805" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1110" top="8805" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="41" dstpinname="Input Node" srcnodeid="13" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="42" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <BOUNDS height="100" left="2190" top="8010" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="2190" top="8010" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="5010" left="17580" top="525" type="Window" width="6240">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="42" dstpinname="Layers" srcnodeid="13" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\Transform\Camera (Transform Softimage).v4p" id="43" nodename="Camera (Transform Softimage)" systemname="Camera (Transform Softimage)">
+   <BOUNDS height="100" left="3630" top="7530" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="42" dstpinname="View" srcnodeid="43" srcpinname="View">
+   </LINK>
+   <LINK dstnodeid="42" dstpinname="Projection" srcnodeid="43" srcpinname="Projection">
+   </LINK>
+   <NODE componentmode="InABox" id="44" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="6255" top="5445" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="6255" top="5445" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|TEST VIEWING MODE|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Enabled" srcnodeid="44" srcpinname="Y Output Value">
+   </LINK>
+   </PATCH>
