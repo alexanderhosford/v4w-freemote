@@ -1,0 +1,99 @@
+**This is what is happening so far on the audio side.**
+
+So far the implemented Max/MSP patch contains;
+
+*8 groove~ objects that have basic wavetable synthesis capabilities
+*Each of these has a reverb object that they can be passed through. Mild reverb (or extreme) often takes the clips out of the wavetable transitions.
+*Each object possesses its own gain~ control and a panner object, capable of passing the sound to one of four speakers.
+	
+The four channels all pass through (two channels per unit);
+
+*Two Peak Limiters - These make sure the dB level never goes above a certain threshold
+*Two Compressors - These 'squash' the dynamic range of the generated sounds and try to keep things at the same audible levels.
+*Two High Pass Filters - These take out the extreme low-end frequencies and allow more harmonic frequencies to come through. This is also in place to protect the speakers.
+
+OSC messages can be received and passed to any of the objects that we wish. It takes in floats from 0 to 1 and map the values patch-side.
+
+
+^^General
+
+Background track playing.
+
+Each person controlling one 'track'.
+
+When person enters space, background ramps down, assigned 'track' ramps up.
+
+Track Parameters
+
+*GranTrack Object*
+
+Left & Right hands control start and end loop points respectively. In this respect a person can treat a loop of audio like an elastic object. If the distance between the hands increases, so does the length of the wavetable being read from disk. If the hands move in tandem in either direction, then the slice of wavetable currently playing will move through the wavetable with the hands.
+
+Overall(?) distance from Kinect controls sample speed?
+
+*Reverb*
+
+Roomsize - 
+
+Reverbtime - NEED TO CHANGE TO SENSIBLE RANGE
+
+Dry Level - 
+
+Tail Level -
+
+Early Level - 
+
+Damping Level - 
+
+*Panning*
+
+I have four channel panning implemented and working. Direction of leg motion determines a sound to be 'thrown' at a speaker?
+
+*Possible AU Units*
+
+Possibility of other motions controlling other effects units effecting the sound
+
+*3D Object Tracking*
+
+Some of the objects & visualisations (balls, clouds, floor visuals) that are being created/manipulated by Mike, Gary, Jo could be assigned their own sounds.
+
+These sounds could;
+
+*Be spatialised in relation to their location in the virtual space. (This might be a better use of the panning mechanism)
+
+*Have their sound altered by effects units if something happens to them/if people interact with them.
+
+*Alter in regard to the amount of people that are currently in the display.
+
+
+**NEED TO IMPLEMENT**
+
+DONE*'Smoothing' of values. Due to network latency we may often receive a value over OSC whose value is extreme in relation to the current value. In an attempt to make sure there are less glitchy changes Tom suggests I should look at smoothing the values the patch receives. Instead of instantly changing the value of a parameter, if the difference between current and proposed value is extreme then the current value is set in motion towards the new proposed value. If the current/proposed values are close then the value is instantly changed.
+
+DONE*Swapping of loop start/end points if either overlaps with the other.
+
+DONE*Take Barney's bounced down individual tracks and place them into separate looper objects, with its own mixer functionality. This will make up the backing part of the installation.
+
+*Take tracks from Barney that have no spaces - the interactive audio to be fucked with.
+
+DONE - A CROSSFADE OBJECT THAT RAMPS EQUAL POWER BETWEEN THE TWO OVER 5 SECONDS*A switchover between the backing and the interactive parts of the installation. This will automatically switch over from backing to interaction and back again, when tracked persons enter or leave the space. Will need to have ramping on the gains to make this transition smooth - more line object funkiness.
+
+*Have another look at my reverb object - from audition it sounds as if it is on even though the patch tells me otherwise. I may even just replace this with a reverberation AU if the CPU load is fine. My AU things are already working fine.
+
+*Very open to suggestions/comments
+
+*Running ableton at same time - backing runs in ableton - pass through audio so max is running within it
+
+*Look at the loading of the AU units - can't do it too quickly otherwise it fucks. Need to place the messages in the right order so it loads properly.
+
+*Set backing tracks to restart from the beginning
+
+DONE*Take Ball Sounds
+
+DONE*Make Balls travel
+
+*Get trajectory data from Gaz to make balls travel
+
+*Modularise - Andy is helping me with this bit
+
+DONE*Cut up harp sounds from 'Fire Dance'
